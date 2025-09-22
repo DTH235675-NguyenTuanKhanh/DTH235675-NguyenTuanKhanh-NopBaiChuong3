@@ -1,0 +1,14 @@
+import random
+import string
+
+n=int(input("Nhập n: "))
+chuoi= [random.choice(string.ascii_letters),random.choice(string.digits)]
+for _ in range (n-2):
+    chuoi.append(random.choice(string.ascii_letters + string.digits)) 
+s="".join(chuoi)
+print("Chuỗi đã tạo: ",s)
+print("Chuỗi đảo ngược: ",s[::-1])
+chu=sum(c.isalpha() for c in s)
+so=sum(c.isdigit() for c in s)
+print("Số chữ cái: ",chu)
+print("Số chữ số: ",so)

@@ -1,0 +1,9 @@
+s=input("Nhập chuỗi:")
+n=len(s)
+so=n
+for i in range(n+1):
+    chuoi=s+s[:i][::-1]
+    if chuoi==chuoi[:i][::-1]:
+        so=i
+        break
+print("Chuỗi cần thêm là:",so)
