@@ -1,0 +1,18 @@
+s= str(input(" Nhập chuỗi: "))
+i=int(input("Nhập i: "))
+j=int(input("Nhập j: "))
+n=len(s)
+dau=s[0]
+cuoi=s[-1]
+if i<0:i=0
+if j>=n:j=n-1
+if i>j:
+    sub = " "
+else:
+    sub =s[i:j+1]
+if n>0:
+    print("Ký tự đầu: ",s[0])
+    print("Ký tự cuối: ",s[-1])
+
+print("Chiều dài chuỗi là: ",n)
+print("Chuỗi từ {i} đến {j}: ",sub)
