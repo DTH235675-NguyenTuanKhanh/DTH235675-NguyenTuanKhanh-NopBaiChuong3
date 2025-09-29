@@ -1,0 +1,8 @@
+
+s1 = input("Nhập chuỗi s1: ")
+s2 = input("Nhập chuỗi s2: ")
+idx = s1.find(s2)
+if idx >= 0:
+    print("Có, tại vị trí", idx)
+else:
+    print("Không tìm thấy")
