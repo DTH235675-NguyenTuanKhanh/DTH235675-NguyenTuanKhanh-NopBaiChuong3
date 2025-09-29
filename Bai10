@@ -1,0 +1,8 @@
+
+email = input("Nhập email: ")
+ok = False
+if email.count("@")==1:
+    local, domain = email.split("@")
+    if local and domain and "." in domain and not domain.startswith(".") and not domain.endswith("."):
+        ok = True
+print("Hợp lệ?", ok)

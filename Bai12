@@ -1,0 +1,32 @@
+chuoi = input("Nhập chuỗi: ")
+
+thong_ke = {
+    "chu_hoa": 0,
+    "chu_thuong": 0,
+    "chu_so": 0,
+    "ky_tu_dac_biet": 0,
+    "khoang_trang": 0,
+    "nguyen_am": 0,
+    "phu_am": 0
+}
+
+nguyen_am = set("aeiouAEIOU")
+
+for kytu in chuoi:
+    if kytu.isupper():
+        thong_ke["chu_hoa"] += 1
+    if kytu.islower():
+        thong_ke["chu_thuong"] += 1
+    if kytu.isdigit():
+        thong_ke["chu_so"] += 1
+    if kytu.isspace():
+        thong_ke["khoang_trang"] += 1
+    if not (kytu.isalnum() or kytu.isspace()):
+        thong_ke["ky_tu_dac_biet"] += 1
+    if kytu.isalpha():
+        if kytu in nguyen_am:
+            thong_ke["nguyen_am"] += 1
+        else:
+            thong_ke["phu_am"] += 1
+
+print("Kết quả phân loại:", thong_ke)

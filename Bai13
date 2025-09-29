@@ -1,0 +1,6 @@
+import re
+print("\nBài 13: Tìm số âm trong chuỗi")
+s = input("Nhập chuỗi: ")
+negs = re.findall(r'-(\d+)', s)
+print([ -int(x) for x in negs ])
+

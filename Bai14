@@ -1,0 +1,3 @@
+s = input("Nhập họ tên: ")
+parts = [p.capitalize() for p in s.strip().split() if p]
+print("Kết quả:", " ".join(parts))

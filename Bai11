@@ -1,0 +1,18 @@
+import math
+import re
+s = input("Nhập chuỗi chứa số: ")
+
+def is_prime(n: int) -> bool:
+    if n <= 1: return False
+    if n <= 3: return True
+    if n % 2 == 0: return False
+    r = int(math.sqrt(n))
+    for i in range(3, r+1, 2):
+        if n % i == 0: return False
+    return True
+nums = [int(x) for x in re.findall(r'-?\d+', s)]
+print("Các số:", nums)
+print("Số chẵn:", [x for x in nums if x%2==0])
+print("Số âm:", [x for x in nums if x<0])
+print("Số nguyên tố:", [x for x in nums if is_prime(abs(x))])
+print("Trung bình:", sum(nums)/len(nums) if nums else 0)

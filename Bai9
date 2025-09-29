@@ -1,0 +1,3 @@
+
+cccd = input("Nhập số CCCD: ")
+print("Hợp lệ?", len(cccd)==12 and cccd.isdigit())
